@@ -27,9 +27,9 @@ def nyc_pigeon_organizer(data)
         inner_hash = attribute_and_name.reduce({}) do | inside_hash, (attribute_value, name)|
           inner_array << attribute_value.to_s
           inside_hash[attribute] = attribute_value
-        end
         name = inner_hash
-
+        end
+        
       end
 end
 
