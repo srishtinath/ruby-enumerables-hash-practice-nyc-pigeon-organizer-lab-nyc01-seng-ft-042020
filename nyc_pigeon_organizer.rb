@@ -11,10 +11,9 @@ def nyc_pigeon_organizer(data)
           if pigeon_list[name][attribute] == nil
             pigeon_list[name][attribute] = []
           end
+          pigeon_list[name][attribute].push(stats.to_s)
         end
-          memo[key] = inner_array
       end
     end
-    memo_name[name] = inner_hash
-    memo_name
+    pigeon_list
 end
