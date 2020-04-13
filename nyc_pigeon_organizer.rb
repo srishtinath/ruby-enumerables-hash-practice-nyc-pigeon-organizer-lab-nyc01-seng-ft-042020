@@ -29,7 +29,7 @@ def nyc_pigeon_organizer(data)
           inside_hash[attribute] = attribute_value
           outer_hash[name] = inner_hash
         end
-
+end
 end
 
 nyc_pigeon_organizer(pigeon_data)
