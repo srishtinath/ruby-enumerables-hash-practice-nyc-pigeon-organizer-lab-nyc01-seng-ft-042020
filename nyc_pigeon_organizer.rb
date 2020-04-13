@@ -27,7 +27,7 @@ def nyc_pigeon_organizer(data)
         memo[attribute] = inner_array
         memo
       end
-        
+
       end
 end
 
