@@ -22,13 +22,11 @@ def nyc_pigeon_organizer(data)
   # write your code here!
   data.reduce({}) do | memo, (attribute, attribute_and_name)|
 
-    inner_array = []
-
-        inner_hash = attribute_and_name.reduce({}) do | inside_hash, (attribute_value, name)|
-          inner_array << attribute_value.to_s
-          inside_hash[attribute] = attribute_value
-        name = inner_hash
-        end
+      inner_hash = attribute_and_name.reduce({}) do |memo, (attribute_value, name)|
+        inner_array = attribute_and_name.map {|attribute_value, name| attribute_value.to_s}
+        memo[attribute] = inner_array
+        memo
+      end
         
       end
 end
