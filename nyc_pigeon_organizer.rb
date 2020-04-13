@@ -9,4 +9,5 @@ def nyc_pigeon_organizer(data)
     memo_name[name] = inner_hash
       end
     end
+    memo_name
 end
