@@ -1,9 +1,17 @@
 
 def nyc_pigeon_organizer(data)
   # write your code here!
-  data.reduce({}) do |memo_name, (key, value_array)|
-        inner_hash = value_array.reduce({}) do |memo, (attribute_value, name)|
-          inner_array = attribute_and_name.map { |attribute_value, name| attribute_value.to_s}
+  pigeon_list = {}
+  data.each do |attribute, value|
+     value.each do |stats, name_array|
+        name_array.each do |name|
+          if pigeon_list[name] == nil
+            pigeon_list[name] = {}  
+          end
+          if pigeon_list[name][attribute] == nil
+            pigeon_list[name][attribute] = []
+          end
+        end
           memo[key] = inner_array
       end
     end
