@@ -21,7 +21,6 @@ pigeon_data = {
 def nyc_pigeon_organizer(data)
   # write your code here!
   data.reduce({}) do | memo, (attribute, attribute_and_name)|
-    outer_hash = {}
 
     inner_array = []
 
@@ -29,7 +28,7 @@ def nyc_pigeon_organizer(data)
           inner_array << attribute_value.to_s
           inside_hash[attribute] = attribute_value
         end
-        outer_hash[name] = inner_hash
+        name = inner_hash
 
       end
 end
